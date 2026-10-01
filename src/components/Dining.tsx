@@ -84,7 +84,7 @@ export function Dining() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               <div className="absolute bottom-5 left-5">
-                <span className="text-konica-gold font-serif text-lg italic">Chef's Specialties</span>
+                <span className="text-konica-gold font-serif text-lg italic">Chef&apos;s Specialties</span>
               </div>
             </motion.div>
           </div>

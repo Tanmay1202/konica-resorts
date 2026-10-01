@@ -26,7 +26,7 @@ export function ResortStory() {
             </h2>
             <div className="space-y-5 text-white/55 font-light leading-[1.8] text-[15px]">
               <p>
-                Nestled along the Jalandhar Highway near Lovely Professional University, Konica Resorts stands as Phagwara's premier destination for grand celebrations and tranquil retreats. Our neoclassical architecture welcomes you into a world of refined hospitality.
+                Nestled along the Jalandhar Highway near Lovely Professional University, Konica Resorts stands as Phagwara&apos;s premier destination for grand celebrations and tranquil retreats. Our neoclassical architecture welcomes you into a world of refined hospitality.
               </p>
               <p>
                 From ornate banquet halls adorned with hand-painted ceiling medallions to intimate courtyard gatherings bathed in ambient light — every space has been thoughtfully designed to transform your most important moments into lasting memories.
