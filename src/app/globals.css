@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Palette derived from Konica photography ── */
+  --color-konica-navy: #1a1a2e;        /* Deep navy from carpet/accent lighting */
+  --color-konica-navy-light: #242442;  /* Lighter navy */
+  --color-konica-gold: #c9a84c;        /* Warm gold from ceiling medallions & brass */
+  --color-konica-gold-light: #d4b85c;  /* Lighter gold for hover */
+  --color-konica-copper: #b87333;      /* Copper from chafing dishes */
+  --color-konica-teal: #2d8a8a;        /* Teal from velvet chairs */
+  --color-konica-cream: #f5f0e8;       /* Warm cream from walls */
+  --color-konica-cream-dark: #e8e0d0;  /* Darker cream */
+  --color-konica-charcoal: #1c1c1c;    /* Near-black for surfaces */
+  --color-konica-surface: #111111;     /* Background surface */
+  --color-konica-surface-elevated: #1a1a1a; /* Elevated surface */
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+:root {
+  --background: #0c0c0c;
+  --foreground: #f5f0e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-konica-gold);
+}
+
+/* ── Serif headings ── */
+h1, h2, h3, h4, h5, h6,
+.heading-serif {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+/* ── Selection ── */
+::selection {
+  background: var(--color-konica-gold);
+  color: var(--color-konica-navy);
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Section separator ── */
+.section-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--color-konica-gold);
+  margin: 0 auto;
+}
