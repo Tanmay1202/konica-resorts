@@ -1,94 +1,86 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { IMAGES } from "@/lib/assets";
 
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" as const } }
+};
+
 export function Experience() {
+  const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1.1, 1]);
+
   return (
-    <section className="relative bg-[#0c0c0c]">
-      {/* Full-bleed cinematic image */}
-      <div className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden">
-        <motion.div
-          initial={{ scale: 1.1 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.5 }}
-          className="absolute inset-0"
-        >
+    <section ref={containerRef} className="relative bg-konica-charcoal py-24 flex flex-col">
+      {/* Cinematic Interlude */}
+      <div className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden">
+        <motion.div style={{ scale }} className="absolute inset-0 w-full h-full">
           <img
-            src={IMAGES.ballroomDining}
-            alt="The Grand Ballroom dining experience at Konica Resorts"
-            className="w-full h-full object-cover"
+            src={IMAGES.banquetCelebration}
+            alt="Banquet Celebration"
+            className="object-cover w-full h-full"
           />
         </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0c] via-[#0c0c0c]/20 to-[#0c0c0c]/40" />
         
-        {/* Centered editorial text */}
-        <div className="absolute inset-0 flex items-center justify-center">
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/50" />
+        
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="text-center px-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={{
+              visible: { transition: { staggerChildren: 0.2 } }
+            }}
           >
-            <p className="text-konica-gold uppercase tracking-[0.3em] text-[11px] font-medium mb-6">
+            <motion.span variants={fadeUpVariant} className="block text-konica-gold tracking-widest uppercase text-sm mb-4">
               The Konica Promise
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-6xl text-white max-w-3xl leading-[1.15]">
-              Every Detail,{" "}
-              <span className="italic text-konica-cream/80">Perfected</span>
-            </h2>
-            <p className="mt-6 text-white/50 font-light text-[15px] max-w-lg mx-auto leading-relaxed">
-              From the ornate ceiling medallions to the copper-finished buffet stations, every element at Konica Resorts has been crafted with purpose and care.
-            </p>
+            </motion.span>
+            <motion.h2 variants={fadeUpVariant} className="text-white font-serif text-5xl md:text-7xl mb-6">
+              Every Detail, <span className="italic text-konica-copper">Perfected</span>
+            </motion.h2>
+            <motion.p variants={fadeUpVariant} className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
+              From the gold-leaf ceilings that catch the light of a thousand crystals to the impeccably styled banquet tables — every element at Konica Resorts has been curated to elevate your celebration.
+            </motion.p>
           </motion.div>
         </div>
       </div>
 
-      {/* Detail strip */}
-      <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-16">
-        <div className="grid grid-cols-3 gap-3 md:gap-4">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="aspect-[4/3] overflow-hidden group"
-          >
-            <img
-              src={IMAGES.diningBuffetFront}
-              alt="Buffet pergola detail"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="aspect-[4/3] overflow-hidden group"
-          >
-            <img
-              src={IMAGES.courtyardWide}
-              alt="The Courtyard setup"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="aspect-[4/3] overflow-hidden group"
-          >
-            <img
-              src={IMAGES.exteriorSign}
-              alt="Konica Resorts signage at dusk"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-          </motion.div>
-        </div>
+      {/* Detail Strip */}
+      <div className="container mx-auto px-4 md:px-8 mt-16 md:mt-24">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.2 } }
+          }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+          {[
+            { src: IMAGES.buffetDisplay, alt: "Opulent golden banquet buffet display" },
+            { src: IMAGES.baraatArrival, alt: "Cinematic baraat arrival" },
+            { src: IMAGES.exteriorSunset, alt: "Konica Resorts at sunset" }
+          ].map((img, idx) => (
+            <motion.div key={idx} variants={fadeUpVariant} className="relative group overflow-hidden aspect-[4/3]">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/0" />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

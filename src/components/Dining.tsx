@@ -25,7 +25,7 @@ export function Dining() {
               <span className="italic text-konica-cream/70">Every Palate</span>
             </h2>
             <p className="text-white/50 font-light text-[15px] max-w-xl mx-auto leading-relaxed">
-              Our multi-cuisine restaurant and elaborate banquet buffet service bring together the finest flavors of India and beyond — served with the artistry your occasion deserves.
+              From lavish multi-cuisine buffets featuring the finest Punjabi, North Indian, and continental flavors to artfully presented live cooking stations — every banquet at Konica is a culinary celebration in its own right.
             </p>
           </motion.div>
         </div>
@@ -41,8 +41,8 @@ export function Dining() {
             className="md:col-span-7 aspect-[4/3] overflow-hidden group relative"
           >
             <img
-              src={IMAGES.diningBuffetLong}
-              alt="Elaborate copper buffet station at Konica Resorts"
+              src={IMAGES.buffetDiningHall}
+              alt="Luxurious buffet dining hall at Konica Resorts"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
@@ -61,13 +61,13 @@ export function Dining() {
               className="aspect-[16/10] overflow-hidden group relative"
             >
               <img
-                src={IMAGES.diningIndian}
-                alt="Indian cuisine station at Konica Resorts"
+                src={IMAGES.buffetIndian}
+                alt="Elegant Indian buffet display"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               <div className="absolute bottom-5 left-5">
-                <span className="text-konica-gold font-serif text-lg italic">Indian Cuisine</span>
+                <span className="text-konica-gold font-serif text-lg italic">Traditional Cuisine</span>
               </div>
             </motion.div>
             <motion.div
@@ -78,13 +78,13 @@ export function Dining() {
               className="aspect-[16/10] overflow-hidden group relative"
             >
               <img
-                src={IMAGES.diningPlated}
-                alt="Gourmet plated cuisine"
+                src={IMAGES.buffetGoldenInterior}
+                alt="Luxurious golden buffet interior"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               <div className="absolute bottom-5 left-5">
-                <span className="text-konica-gold font-serif text-lg italic">Chef&apos;s Specialties</span>
+                <span className="text-konica-gold font-serif text-lg italic">Banquet Dining</span>
               </div>
             </motion.div>
           </div>

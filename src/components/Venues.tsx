@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { IMAGES } from "@/lib/assets";
 import Link from "next/link";
+import { IMAGES } from "@/lib/assets";
 
 export function Venues() {
   return (
@@ -41,8 +41,8 @@ export function Venues() {
           className="relative w-full aspect-[16/7] md:aspect-[16/6] overflow-hidden"
         >
           <img
-            src={IMAGES.ballroomWide}
-            alt="The Grand Ballroom at Konica Resorts — ornate ceiling, teal chairs, crystal chandelier"
+            src={IMAGES.banquetGoldenHall}
+            alt="The Grand Ballroom at Konica Resorts — opulent golden ceiling, crystal chandeliers, luxurious seating"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0c] via-[#0c0c0c]/20 to-transparent" />
@@ -69,7 +69,7 @@ export function Venues() {
                 <span className="px-3 py-1 bg-konica-navy/50 text-konica-gold text-[10px] font-semibold tracking-wider uppercase border border-konica-gold/30">Capacity: 300 - 1500 Guests</span>
               </div>
               <p className="text-white/60 font-light leading-relaxed text-[15px] mb-8">
-                An expansive, opulent setting crowned by hand-painted ceiling medallions and crystal chandeliers. Luxurious teal velvet seating, intricate carpet patterns, and warm ambient lighting create a backdrop worthy of your most significant celebrations, comfortably accommodating up to 1500 guests.
+                Step into unparalleled grandeur. Featuring opulent gold-leaf ceilings, magnificent crystal chandeliers, hand-painted medallions, and plush seating — a space meticulously designed for the grandest Punjabi weddings, lavish receptions, and milestone celebrations that demand nothing less than perfection.
               </p>
               <Link
                 href="#contact"
@@ -85,7 +85,11 @@ export function Venues() {
       {/* Ballroom detail images */}
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {[IMAGES.ballroomStage, IMAGES.ballroomCeiling, IMAGES.ballroomLounge].map((img, i) => (
+          {[
+            { src: IMAGES.banquetSymmetrical, alt: "Symmetrical golden banquet hall view" },
+            { src: IMAGES.banquetGoldenInterior2, alt: "Ornate golden banquet hall interior" },
+            { src: IMAGES.banquetWedding, alt: "Lavish Punjabi wedding setup" },
+          ].map((img, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
@@ -95,8 +99,8 @@ export function Venues() {
               className="aspect-[4/3] overflow-hidden group"
             >
               <img
-                src={img}
-                alt={`Grand Ballroom detail ${i + 1}`}
+                src={img.src}
+                alt={img.alt}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </motion.div>
@@ -131,10 +135,10 @@ export function Venues() {
                 <span className="px-3 py-1 bg-konica-navy/50 text-konica-gold text-[10px] font-semibold tracking-wider uppercase border border-konica-gold/30">Capacity: 60 - 80 Guests</span>
               </div>
               <p className="text-white/60 font-light leading-relaxed text-[15px] mb-6">
-                A refined banquet space bathed in sapphire-blue ambient lighting. Gold-draped seating and elegant table settings create an atmosphere of warmth and intimacy — perfect for receptions, family gatherings, and celebrations that call for a personal touch.
+                A refined banquet space bathed in dramatic sapphire-blue ambient lighting. Gold-draped seating and elegant table settings create an atmosphere of warmth and intimacy — perfect for receptions, engagement ceremonies, and exclusive family gatherings.
               </p>
               <p className="text-white/60 font-light leading-relaxed text-[15px] mb-8">
-                Complete with a dedicated copper-service buffet area, The Courtyard ensures every detail of your event is thoughtfully attended to.
+                Every detail, from the atmospheric lighting to the curated table décor, ensures your intimate celebration is as unforgettable as it is beautiful.
               </p>
               <Link
                 href="#contact"
@@ -155,15 +159,15 @@ export function Venues() {
               <div className="grid grid-cols-2 gap-3">
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
-                    src={IMAGES.courtyardHall}
-                    alt="The Courtyard banquet hall with blue lighting"
+                    src={IMAGES.banquetBlueElegant}
+                    alt="Elegant blue-lit banquet hall"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="aspect-[3/4] overflow-hidden mt-12">
                   <img
-                    src={IMAGES.courtyardTables}
-                    alt="Courtyard table settings with copper buffet"
+                    src={IMAGES.banquetBlueLuxurious}
+                    alt="Luxurious blue-lit banquet setting"
                     className="w-full h-full object-cover"
                   />
                 </div>

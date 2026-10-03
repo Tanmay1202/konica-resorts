@@ -38,7 +38,7 @@ export function Stay() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Left: Images */}
+          {/* Left: Image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -46,18 +46,10 @@ export function Stay() {
             transition={{ duration: 1 }}
             className="relative"
           >
-            <div className="aspect-[4/3] w-full max-w-lg mx-auto overflow-hidden shadow-2xl relative z-10">
+            <div className="aspect-[4/3] w-full max-w-xl mx-auto overflow-hidden shadow-2xl relative z-10 border-l-2 border-konica-gold">
               <img
-                src={IMAGES.hotelRoom}
-                alt="Konica Resorts luxury hotel room"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
-            <div className="absolute -bottom-12 -right-4 w-40 md:w-56 aspect-[3/4] overflow-hidden border-4 border-[#1a1a1a] shadow-2xl z-20 hidden sm:block">
-              <img
-                src={IMAGES.hotelBathroom}
-                alt="Konica Resorts luxury bathroom"
+                src={IMAGES.exteriorSunset}
+                alt="Konica Resorts exterior at golden hour"
                 className="w-full h-full object-cover"
               />
             </div>

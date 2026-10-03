@@ -1,32 +1,33 @@
-// Konica Resorts — Real Asset Map
+// Konica Resorts — Asset Map (New High-Resolution Image Set)
 // All paths are relative to /public and served from the root URL.
+// Filenames with spaces are URL-encoded for safety.
 
 export const IMAGES = {
+  // LOGO
+  logo: "/new-images/KONICA RESORTS Gold Wordmark.png",
+
   // EXTERIOR
-  exteriorDusk: "/images/exterior-dusk.jpg",       // Building facade at dusk — HERO
-  exteriorSign: "/images/exterior-sign.jpg",       // Close-up signage
+  exteriorSunset: "/new-images/KONICA Resorts at Sunset.png",
+  exteriorNight: "/new-images/KONICA RESORTS by Night.png",
 
-  // THE GRAND BALLROOM
-  ballroomWide: "/images/ballroom-wide.jpg",       // Wide-angle, ornate ceiling medallions, teal chairs
-  ballroomLounge: "/images/ballroom-lounge.jpg",   // Sofa seating area, portraits, pink lighting
-  ballroomDining: "/images/ballroom-dining.jpg",   // Dining tables, buffet area visible
-  ballroomStage: "/images/ballroom-stage.jpg",     // Stage with floral arch, lounge + teal chairs
-  ballroomCeiling: "/images/ballroom-ceiling.jpg", // Ceiling medallions focus, teal chairs, buffet
+  // GRAND BANQUET HALLS — Golden Theme
+  banquetGoldenHall: "/new-images/Opulent Golden Banquet Hall.png",
+  banquetGoldenInterior: "/new-images/Opulent Golden Banquet Hall Interior.png",
+  banquetGoldenInterior2: "/new-images/Opulent Golden Banquet Hall Interior (1).png",
+  banquetSymmetrical: "/new-images/Opulent Symmetrical Banquet Hall.png",
+  banquetWedding: "/new-images/Lavish Punjabi Wedding Banquet Hall.png",
+  banquetCelebration: "/new-images/Luxurious South Asian Banquet Celebration.png",
 
-  // THE COURTYARD
-  courtyardHall: "/images/courtyard-hall.jpg",     // Blue-lit ceiling, gold chairs, red cushions
-  courtyardWide: "/images/courtyard-wide.jpg",     // Wider view of courtyard banquet
-  courtyardTables: "/images/courtyard-tables.jpg", // Table setup, copper buffet in background
-  courtyardSetup: "/images/courtyard-setup.jpg",   // Another table view
+  // BANQUET HALLS — Blue-Lit Theme
+  banquetBlueElegant: "/new-images/Elegant Blue-Lit Banquet Hall.png",
+  banquetBlueLuxurious: "/new-images/Luxurious Blue-Lit Banquet Hall.png",
 
   // DINING / BUFFET
-  diningBuffetFront: "/images/dining-buffet-front.jpg", // Copper chafing dishes, pergola structure
-  diningBuffetLong: "/images/dining-buffet-long.jpg",   // Long buffet counter, brass decor
-  diningIndian: "/images/dining-indian.jpg",            // "Indian Food" sign, copper dishes
-  diningSalad: "/images/dining-salad.jpg",              // Salad bar, lanterns
-  diningPlated: "/images/plated-food.jpg",              // Elegant plated food
+  buffetIndian: "/new-images/Elegant Indian Buffet Display.png",
+  buffetDiningHall: "/new-images/Luxurious Buffet Dining Hall.png",
+  buffetGoldenInterior: "/new-images/Luxurious Golden Buffet Interior.png",
+  buffetDisplay: "/new-images/Opulent Golden Banquet Buffet Display.png",
 
-  // HOTEL ROOMS
-  hotelRoom: "/images/hotel-room.jpg",                  // Luxury room
-  hotelBathroom: "/images/hotel-bathroom.jpg",          // Luxury bathroom
+  // EVENTS / CELEBRATIONS
+  baraatArrival: "/new-images/Cinematic Baraat Arrival at Konica Resorts.png",
 } as const;

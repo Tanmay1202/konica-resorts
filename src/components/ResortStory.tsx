@@ -17,19 +17,19 @@ export function ResortStory() {
           >
             <div className="w-12 h-[1px] bg-konica-gold mb-8" />
             <p className="text-konica-gold uppercase tracking-[0.25em] text-[11px] font-medium mb-5">
-              The Konica Experience
+              Our Legacy
             </p>
             <h2 className="font-serif text-3xl md:text-5xl text-white leading-[1.15] mb-8">
-              A Destination Crafted for
+              Where Grandeur Meets
               <br />
-              <span className="italic text-konica-cream/70">Celebration & Comfort</span>
+              <span className="italic text-konica-cream/70">Gracious Hospitality</span>
             </h2>
             <div className="space-y-5 text-white/55 font-light leading-[1.8] text-[15px]">
               <p>
-                Nestled along the Jalandhar Highway near Lovely Professional University, Konica Resorts stands as Phagwara&apos;s premier destination for grand celebrations and tranquil retreats. Our neoclassical architecture welcomes you into a world of refined hospitality.
+                From the moment you enter, you are immersed in a world of unparalleled luxury. Our opulent golden interiors, illuminated by magnificent crystal chandeliers, set the perfect stage for life&apos;s most momentous occasions. As Phagwara&apos;s premier celebration destination near the Jalandhar Highway and LPU, we pride ourselves on turning dreams into resplendent realities.
               </p>
               <p>
-                From ornate banquet halls adorned with hand-painted ceiling medallions to intimate courtyard gatherings bathed in ambient light — every space has been thoughtfully designed to transform your most important moments into lasting memories.
+                Whether you are hosting a traditional Punjabi wedding of epic proportions or an intimate, sophisticated gathering, our legacy is built on impeccable service and attention to every detail. At Konica Resorts, every event is a masterpiece, crafted with passion and surrounded by architectural grandeur.
               </p>
             </div>
           </motion.div>
@@ -42,10 +42,10 @@ export function ResortStory() {
             transition={{ duration: 1.1 }}
             className="relative"
           >
-            <div className="relative aspect-[4/3] md:aspect-[16/10] w-full max-w-2xl mx-auto lg:ml-auto overflow-hidden shadow-2xl">
+            <div className="relative aspect-[4/3] md:aspect-[16/10] w-full max-w-2xl mx-auto lg:ml-auto overflow-hidden shadow-2xl border-l-2 border-konica-gold">
               <img
-                src={IMAGES.ballroomWide}
-                alt="The Grand Ballroom at Konica Resorts"
+                src={IMAGES.banquetGoldenInterior}
+                alt="Opulent golden banquet hall interior at Konica Resorts"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0c]/40 to-transparent" />
@@ -59,8 +59,8 @@ export function ResortStory() {
               className="absolute -bottom-10 -left-6 lg:-left-16 w-40 md:w-56 aspect-[3/4] overflow-hidden border-4 border-[#0c0c0c] shadow-2xl hidden sm:block z-10"
             >
               <img
-                src={IMAGES.exteriorDusk}
-                alt="Konica Resorts exterior"
+                src={IMAGES.exteriorSunset}
+                alt="Konica Resorts at sunset"
                 className="w-full h-full object-cover"
               />
             </motion.div>

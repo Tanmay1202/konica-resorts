@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { IMAGES } from "@/lib/assets";
 
 const FOOTER_NAV = [
   {
@@ -30,14 +31,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
-              <div className="flex flex-col">
-                <span className="font-serif text-2xl tracking-[0.25em] uppercase text-white font-medium leading-none">
-                  Konica
-                </span>
-                <span className="text-[9px] tracking-[0.35em] uppercase text-konica-gold font-medium mt-0.5">
-                  Resorts
-                </span>
-              </div>
+              <img src={IMAGES.logo} alt="Konica Resorts" className="h-10 w-auto" draggable={false} />
             </Link>
             <p className="text-white/40 text-sm font-light leading-relaxed max-w-xs">
               A premier hotel and banquet destination in Phagwara, Punjab — where every occasion finds its perfect setting.
