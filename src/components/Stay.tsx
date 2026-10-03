@@ -27,7 +27,7 @@ export function Stay() {
           >
             <div className="w-12 h-[1px] bg-konica-gold mx-auto mb-8" />
             <p className="text-konica-gold uppercase tracking-[0.25em] text-[11px] font-medium mb-5">
-              The Hotel
+              The Rooms
             </p>
             <h2 className="font-serif text-3xl md:text-5xl text-white leading-[1.15]">
               Rest, Recharge,

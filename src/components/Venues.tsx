@@ -21,7 +21,7 @@ export function Venues() {
               Our Venues
             </p>
             <h2 className="font-serif text-3xl md:text-5xl text-white mb-6">
-              Two Extraordinary Spaces
+              Two Banquet Halls
             </h2>
             <p className="text-white/50 font-light text-[15px] max-w-xl mx-auto leading-relaxed">
               From grand celebrations that fill every corner with joy to intimate gatherings that sparkle with personal warmth — Konica offers a stage for every story.
