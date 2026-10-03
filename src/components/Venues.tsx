@@ -41,8 +41,8 @@ export function Venues() {
           className="relative w-full aspect-[16/7] md:aspect-[16/6] overflow-hidden"
         >
           <img
-            src={IMAGES.banquetGoldenHall}
-            alt="The Grand Ballroom at Konica Resorts — opulent golden ceiling, crystal chandeliers, luxurious seating"
+            src={IMAGES.banquetWedding}
+            alt="Lavish Punjabi wedding setup"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0c] via-[#0c0c0c]/20 to-transparent" />
@@ -88,7 +88,7 @@ export function Venues() {
           {[
             { src: IMAGES.banquetSymmetrical, alt: "Symmetrical golden banquet hall view" },
             { src: IMAGES.banquetGoldenInterior2, alt: "Ornate golden banquet hall interior" },
-            { src: IMAGES.banquetWedding, alt: "Lavish Punjabi wedding setup" },
+            { src: IMAGES.banquetGoldenHall, alt: "The Grand Ballroom at Konica Resorts — opulent golden ceiling, crystal chandeliers, luxurious seating" },
           ].map((img, i) => (
             <motion.div
               key={i}
