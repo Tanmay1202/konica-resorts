@@ -30,4 +30,8 @@ export const IMAGES = {
 
   // EVENTS / CELEBRATIONS
   baraatArrival: "/new-images/Cinematic Baraat Arrival at Konica Resorts.png",
+
+  // ACCOMMODATIONS (AI Generated from previous version)
+  hotelRoom: "/images/hotel-room.jpg",
+  hotelBathroom: "/images/hotel-bathroom.jpg",
 } as const;

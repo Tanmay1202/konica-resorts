@@ -38,21 +38,37 @@ export function Stay() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Left: Image */}
+          {/* Left: Images */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1 }}
             className="relative"
           >
-            <div className="aspect-[4/3] w-full max-w-xl mx-auto overflow-hidden shadow-2xl relative z-10 border-l-2 border-konica-gold">
+            <div className="relative aspect-[4/3] w-full max-w-xl mx-auto lg:ml-auto overflow-hidden shadow-2xl border-l-2 border-konica-gold z-10">
               <img
-                src={IMAGES.exteriorSunset}
-                alt="Konica Resorts exterior at golden hour"
+                src={IMAGES.hotelRoom}
+                alt="Luxurious hotel room at Konica Resorts"
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0c]/40 to-transparent" />
             </div>
+            
+            {/* Offset bathroom image */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="absolute -bottom-12 -left-4 lg:-left-16 w-48 md:w-60 aspect-[3/4] overflow-hidden border-4 border-[#0c0c0c] shadow-2xl hidden sm:block z-20"
+            >
+              <img
+                src={IMAGES.hotelBathroom}
+                alt="Elegant hotel bathroom"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
           </motion.div>
 
           {/* Right: Content */}
